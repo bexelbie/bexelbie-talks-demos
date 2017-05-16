@@ -1,0 +1,3 @@
+- template: src=hello-apache-answers.conf dest=/root/hello-apache-answers.conf
+- shell: atomic run tomaskral/nginx-atomicapp --answers /root/hello-apache-answers.conf
+- file: name=/root/hello-apache-answers.conf state=absent

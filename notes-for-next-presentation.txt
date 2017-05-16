@@ -1,0 +1,20 @@
+Add a photo credits slide:
+
+Photo Credits
+● Smithsonian: https://www.flickr.com/photos/candescence/1144433183/
+● Smithsonian: https://www.flickr.com/photos/candescence/1144433183/
+● Smithsonian: https://www.flickr.com/photos/candescence/1144433183/
+● Smithsonian: https://www.flickr.com/photos/candescence/1144433183/
+
+Add a legal slide
+
+The Legal Bits
+All images in this presentation are copyright their respective
+owners and are used under a Creative Commons License or
+considered fair use.
+
+This presentation is licensed CC BY-SA 4.0. Please use, remix
+and share widely!
+–
+For license information, see
+https://creativecommons.org/licenses/by-sa/4.0/

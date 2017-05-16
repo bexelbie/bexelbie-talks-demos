@@ -1,0 +1,51 @@
+- hosts: localhost
+  sudo: yes
+  connection: local
+  tasks:
+          - name: Install Mesosphere repository
+            yum: name=http://repos.mesosphere.com/el/7/noarch/RPMS/mesosphere-el-repo-7-3.noarch.rpm state=present
+
+          - name: Installing zookeeper, mesos, marathon, docker, git
+            yum: name={{item}} state=present
+            with_items:
+                - mesosphere-zookeeper 
+                - mesos 
+                - marathon
+                - docker
+                - git
+            register: result
+
+          - name: Starting zookeeper, mesos, marathon, docker
+            service: name={{item}} state=started enabled=yes
+            with_items:
+                - zookeeper
+                - mesos-master
+                - mesos-slave
+                - marathon
+                - docker
+
+          - name: Add docker containerizer
+            shell: echo 'docker,mesos' > /etc/mesos-slave/containerizers
+            when: result|success
+
+          - name: Increase timeout to account for docker pull delay
+            shell: echo '5mins' > /etc/mesos-slave/executor_registration_timeout
+            when: result|success
+
+          - name: Create dir for Marathon conf
+            file: path=/etc/marathon/conf/ state=directory
+
+          - name: Configure ip for marathon
+            shell: echo '10.2.2.2' > /etc/marathon/conf/hostname
+
+          - name: Configure ip for mesos-slave
+            shell: echo '10.2.2.2' > /etc/mesos-slave/ip
+
+          - name: Restart mesos-slave and marathon
+            service: name={{item}} state=restarted
+            with_items:
+                - mesos-slave
+                - marathon
+
+          - name: Run service router
+            shell: docker run -d --restart=always --net=host -e MARATHON=http://10.2.2.2:8080  tomaskral/marathon-servicerouter

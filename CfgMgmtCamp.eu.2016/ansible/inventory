@@ -1,0 +1,2 @@
+[marathon-example]
+10.2.2.2 ansible_ssh_user=vagrant ansible_sudo=yes

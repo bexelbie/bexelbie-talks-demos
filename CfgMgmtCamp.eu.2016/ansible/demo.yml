@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+      etherpad_port: 9001
+      db_pass: Ghent
+      db_name: tkral
+      db_user: misc
+      root_db_pass: ConfMGMTCamp
+  tasks:
+  - include: etherpad-atomicapp.yml
+  - include: helloapache-atomicapp.yml

@@ -1,0 +1,3 @@
+- template: src=etherpad-answers.conf dest=/root/answers.conf
+- shell: atomic run tomaskral/etherpad-atomicapp --answers /root/answers.conf
+- file: name=/root/answers.conf state=absent
