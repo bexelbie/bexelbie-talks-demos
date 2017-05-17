@@ -1,0 +1,1 @@
+docker run --name doc-project -p 8080:80 -v /home/bexelbie/Repositories/personal/bexelbie-talks-demos/OSCAL.2017.Dont.Write.It.All/world/person3/site:/usr/share/nginx/html:Z -d nginx
