@@ -35,6 +35,8 @@ This repository contains the slides and files used in talks and demos
 * Getting to DevOps with Docker @ [DevStars](devstars.cz) - 19 Oct 2015
   * [Slides](http://www.winglemeyer.org/bexelbie-talks-demos/DevStars.cz.20151019/slides.pdf)
 
+For several years I have worked with various efforts at [Fosdem](https://fosdem.org).  I keep all of my materials related to CFP submissions and devrooms in the [fosdem](fosdem) directory.
+
 This repository also contains [CFP
 submissions](cfp-submissions) I have made and remembered to keep.
 Some were successful, some were learning experiences.
