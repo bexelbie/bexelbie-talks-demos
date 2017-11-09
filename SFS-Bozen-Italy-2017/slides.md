@@ -198,5 +198,5 @@ Mindshare Commitee
 - Brian (bex) Exelbierd | bexelbie@redhat.com | bex@pobox.com
 - Fedora Community Action & Impact Coordinator
 - @bexelbie | http://www.winglemeyer.org
-- Slides: https://github.com/bexelbie/bexelbie-talks-demos/SFS-Bozen-Italy-2017/
+- Slides: http://www.winglemeyer.org/bexelbie-talks-demos/SFS-Bozen-Italy-2017/
 
