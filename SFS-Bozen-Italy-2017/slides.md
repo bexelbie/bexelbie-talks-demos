@@ -33,6 +33,8 @@ SFScon, Bozen, South Tyrol, Italy - 10 November 2017
 - Corporate Sponsor
 - Started in 2003 - 27th Release ships soon
 
+![Fedora Logo](fedora_logo.png)
+
 <!--sec-->
 ### Governance: 2002
 
